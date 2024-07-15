@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    font-family: "Roboto Mono", monospace;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    height: 7vh;
+    background-color: rgb(4, 51, 118);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+li{
+    padding-left: 1vw;
+    /* font-family: "Roboto Mono", monospace; */
+    font-size: 1.4rem;
+    font-weight: bold;
+    list-style: none;
+}
+
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    padding-top: 3vh;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3 , 9vw);
+    grid-template-rows: repeat(3 , 9vw);
+}
+.box{
+    border: 2px solid black;
+    font-size: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.box:hover{
+    background-color: rgb(240, 246, 253);
+}
+
+.gameInfo{
+    padding: 0px 6vh;
+}
+
+
+.line{
+    background-color: blue;
+    width: 0vw;
+    height: 5px;
+    position: absolute;
+    border-radius: 3px;
+    transition: width 0.3s ease-in-out;
+}
+/* Utility Classes */
+.bt{
+    border-top: 0;
+}
+.bb{
+    border-bottom: 0;
+}
+.bl{
+    border-left: 0;
+}
+.br{
+    border-right: 0;
+}
+
+button{
+    width: 5vw;
+    font-size: 1.3rem;
+    background: #043376;
+    color: white;
+    font-weight: 500;
+    border-radius: 1rem;
+    border: 5px solid #043376;
+}
+
+@media screen and (max-width : 800px){
+    .gameContainer{
+        flex-wrap: wrap;
+        margin-top: 35px;
+    }
+    .gameInfo{
+        margin-top: 45px;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    /* .container{
+        display: grid;
+        grid-template-columns: repeat(3 , 18vw);
+        grid-template-rows: repeat(3 , 18vw);
+    } */
+    .line{
+        /* width: 60vw;
+        transform: translate(-3vw, 26.5vw) rotate(45deg); */
+    }
+}
